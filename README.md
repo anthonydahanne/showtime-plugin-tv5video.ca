@@ -13,6 +13,8 @@ Git: https://github.com/anthonydahanne/showtime-plugin-tv5video.ca
 
 ## Release notes
 
+1.1 - Updated for Movian 4.10 (compatibility with Duktape ecmascript engine)
+
 1.0 - First release
 
 -  allows you to browse shows (Emissions), then select one and choose your episode

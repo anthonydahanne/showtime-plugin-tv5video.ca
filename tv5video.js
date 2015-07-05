@@ -1,7 +1,7 @@
 /**
  * Showtime plugin to watch TV5Canada replay TV 
  *
- * Copyright (C) 2013 Anthony Dahanne
+ * Copyright (C) 2013-2015 Anthony Dahanne
  *
  *     This file is part of TV5Video.ca Showtime plugin.
  *
@@ -64,7 +64,9 @@
 
     showtime.trace("Getting episodes list : " + EPISODES_URL + " " + emissionId);
 	var objectData = {"parameters" : "{\"id\":" + emissionId + ",\"pagesize\":\"16\",\"page\":1}"}
-	var getEpisodesResponse = showtime.httpPost(EPISODES_URL, objectData);
+	var getEpisodesResponse = showtime.httpReq(EPISODES_URL, {
+      postdata: objectData
+    });
 
     var episodes = showtime.JSONDecode(getEpisodesResponse);
 	
